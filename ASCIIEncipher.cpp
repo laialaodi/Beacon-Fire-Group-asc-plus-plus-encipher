@@ -39,3 +39,23 @@ std::vector<std::string> ASCIIEncipher::encipher(std::string str)
 	}
 	return _strList;
 }
+
+char ASCIIEncipher::decipher(std::string str)
+{
+	int ans = 0, k = 0;
+	for (int i = str.length() - 1; i >= 0; i--)
+	{
+		if (str[i] == '1')
+		{
+			ans += fac(2, k);
+		}
+		k++;
+	}
+	return ans;
+}
+
+int ASCIIEncipher::fac(int n, int k)
+{
+	if (k == 0) return 1;
+	return n * fac(n, k - 1);
+}

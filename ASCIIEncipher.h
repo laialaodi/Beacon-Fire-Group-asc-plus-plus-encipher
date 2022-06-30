@@ -24,5 +24,8 @@ class ASCIIEncipher
 {
 public:
 	std::string change(int n, int d);
-	std::vector<std::string> encipher(const std::string str);
+	std::vector<std::string> encipher(std::string str);
+	char decipher(std::string str);
+private:
+	int fac(int n, int k);
 };
