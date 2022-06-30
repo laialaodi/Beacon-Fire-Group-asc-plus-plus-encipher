@@ -33,7 +33,7 @@ std::vector<std::string> ASCIIEncipher::encipher(std::string str)
 	std::vector<std::string> _strList;
 	for (int i = 0; i < str.length(); i++)
 	{
-		std::string _astr = change(int(str[i]), 2);
+		std::string _astr = change(str[i], 2);
 		while (_astr.length() < 8) _astr.insert(0, "0");
 		_strList.emplace_back(_astr);
 	}
